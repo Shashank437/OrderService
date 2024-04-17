@@ -12,7 +12,6 @@ export class OrderController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    console.log('id', id);
     return this.orderService.findOne(id);
   }
 

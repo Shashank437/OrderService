@@ -14,8 +14,8 @@ export class OrderService {
     return createdOrder.save();
   }
 
-  async findOne(id: string): Promise<Order> {
-    return this.orderModel.findById(id).exec();
+  async findOne(orderId: string): Promise<Order> {
+    return this.orderModel.findOne({ orderId: orderId }).exec();
   }
 
   async cancel(id: string): Promise<string> {

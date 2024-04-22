@@ -14,7 +14,7 @@ export class OrderService {
   async updateOrderQuantity(productIds: string[], action: string) {
     await axios({
       method: 'PUT',
-      url: `${process.env.PRODUCT_URL}/quantity/${action}`,
+      url: `${process.env.PRODUCT_URL}/product/quantity/${action}`,
       data: {
         productIds,
       },
